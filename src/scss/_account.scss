@@ -1,0 +1,35 @@
+@mixin account {
+  .account {
+    display: flex;
+    justify-content: space-between;
+		border-top: 1px solid rgb(77, 77, 77);
+		padding: 1rem 0;
+    .account-info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .bank-img {
+        margin-right: 1rem;
+        img {
+          width: 2rem;
+          height: 2rem;
+          padding: 0.3rem;
+          border-radius: 50%;
+          background-color: whitesmoke;
+        }
+      }
+      .account-data {
+        line-height: 1;
+        :first-child {
+          font-weight: 500;
+        }
+      }
+    }
+    .account-amount {
+      color: rgb(0, 204, 255);
+      display: flex;
+      align-items: flex-end;
+      line-height: 1;
+    }
+  }
+}
