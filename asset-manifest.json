@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/financial-organizer/static/css/main.a928f90c.chunk.css",
+    "main.css": "/financial-organizer/static/css/main.63df38c6.chunk.css",
     "main.js": "/financial-organizer/static/js/main.7ed22d5a.chunk.js",
     "main.js.map": "/financial-organizer/static/js/main.7ed22d5a.chunk.js.map",
     "runtime-main.js": "/financial-organizer/static/js/runtime-main.69731105.js",
@@ -8,13 +8,13 @@
     "static/js/2.58ba2554.chunk.js": "/financial-organizer/static/js/2.58ba2554.chunk.js",
     "static/js/2.58ba2554.chunk.js.map": "/financial-organizer/static/js/2.58ba2554.chunk.js.map",
     "index.html": "/financial-organizer/index.html",
-    "static/css/main.a928f90c.chunk.css.map": "/financial-organizer/static/css/main.a928f90c.chunk.css.map",
+    "static/css/main.63df38c6.chunk.css.map": "/financial-organizer/static/css/main.63df38c6.chunk.css.map",
     "static/js/2.58ba2554.chunk.js.LICENSE.txt": "/financial-organizer/static/js/2.58ba2554.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.69731105.js",
     "static/js/2.58ba2554.chunk.js",
-    "static/css/main.a928f90c.chunk.css",
+    "static/css/main.63df38c6.chunk.css",
     "static/js/main.7ed22d5a.chunk.js"
   ]
 }
