@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@500&display=swap");
 @import "header";
+@import "generalBalance";
 
 $backgroung-color: #18191a;
 
@@ -16,5 +17,7 @@ body {
   margin: 0 auto;
   padding: 0 1rem;
   background: $backgroung-color;
+	color: whitesmoke;
   @include header;
+  @include generalBalance;
 }
