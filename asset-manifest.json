@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/financial-organizer/static/css/main.81519a04.chunk.css",
-    "main.js": "/financial-organizer/static/js/main.1a081156.chunk.js",
-    "main.js.map": "/financial-organizer/static/js/main.1a081156.chunk.js.map",
+    "main.css": "/financial-organizer/static/css/main.d431d1dc.chunk.css",
+    "main.js": "/financial-organizer/static/js/main.788d3a89.chunk.js",
+    "main.js.map": "/financial-organizer/static/js/main.788d3a89.chunk.js.map",
     "runtime-main.js": "/financial-organizer/static/js/runtime-main.69731105.js",
     "runtime-main.js.map": "/financial-organizer/static/js/runtime-main.69731105.js.map",
-    "static/js/2.4dc06813.chunk.js": "/financial-organizer/static/js/2.4dc06813.chunk.js",
-    "static/js/2.4dc06813.chunk.js.map": "/financial-organizer/static/js/2.4dc06813.chunk.js.map",
+    "static/js/2.a51774ee.chunk.js": "/financial-organizer/static/js/2.a51774ee.chunk.js",
+    "static/js/2.a51774ee.chunk.js.map": "/financial-organizer/static/js/2.a51774ee.chunk.js.map",
     "index.html": "/financial-organizer/index.html",
-    "static/css/main.81519a04.chunk.css.map": "/financial-organizer/static/css/main.81519a04.chunk.css.map",
-    "static/js/2.4dc06813.chunk.js.LICENSE.txt": "/financial-organizer/static/js/2.4dc06813.chunk.js.LICENSE.txt"
+    "static/css/main.d431d1dc.chunk.css.map": "/financial-organizer/static/css/main.d431d1dc.chunk.css.map",
+    "static/js/2.a51774ee.chunk.js.LICENSE.txt": "/financial-organizer/static/js/2.a51774ee.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.69731105.js",
-    "static/js/2.4dc06813.chunk.js",
-    "static/css/main.81519a04.chunk.css",
-    "static/js/main.1a081156.chunk.js"
+    "static/js/2.a51774ee.chunk.js",
+    "static/css/main.d431d1dc.chunk.css",
+    "static/js/main.788d3a89.chunk.js"
   ]
 }
