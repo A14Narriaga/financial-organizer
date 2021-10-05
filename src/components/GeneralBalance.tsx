@@ -1,16 +1,18 @@
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const GeneralBalance = ({
+	balance,
+	currency,
   showAmount,
   setShowAmount,
   hiddeAmout,
 }: {
+	balance: number
+	currency: string
   showAmount: boolean;
   setShowAmount: any;
   hiddeAmout: string;
 }) => {
-  const currency = "MXN";
-  const amount = 28457.01;
   return (
     <section className="general-balance">
       <div className="amount">
@@ -24,7 +26,7 @@ const GeneralBalance = ({
         ></div>
         <div className="amount-content">
           <p>Saldo general</p>
-          <p>{`${currency} ${showAmount ? amount : hiddeAmout}`}</p>
+          <p>{`${currency} ${showAmount ? balance : hiddeAmout}`}</p>
         </div>
       </div>
       <div
