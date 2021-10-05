@@ -2,7 +2,7 @@
   .account {
     display: flex;
     justify-content: space-between;
-		border-top: 1px solid rgb(77, 77, 77);
+		border-top: 1px solid $line_color;
 		padding: 1rem 0;
     .account-info {
       display: flex;
@@ -23,6 +23,9 @@
         :first-child {
           font-weight: 500;
         }
+				:last-child {
+					color: $detail-color;
+				}
       }
     }
     .account-amount {

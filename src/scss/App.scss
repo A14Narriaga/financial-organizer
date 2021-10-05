@@ -2,9 +2,14 @@
 @import "header";
 @import "generalBalance";
 @import "account";
+@import "modals/addAccount";
 
 $backgroung-color: #18191a;
+$card-color: rgb(46, 46, 46);
+$text-color: whitesmoke;
 $primary-color: rgb(47, 255, 92);
+$line_color: rgb(77, 77, 77);
+$detail-color: rgb(126, 126, 126);
 
 * {
   padding: 0;
@@ -14,35 +19,71 @@ $primary-color: rgb(47, 255, 92);
   font-family: "Baloo Paaji 2", monospace;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input {
+  color: $text-color;
+  background-color: transparent;
+  font-size: 1rem;
+  line-height: 20px;
+  &:focus {
+    outline: none;
+  }
+}
+
+input[type="number"] {
+  text-align: left;
+  width: 35%;
+}
+
+input[type="text"] {
+  border-bottom: 1px solid $primary-color;
+}
+
+select {
+  color: $text-color;
+  font-size: 1rem;
+  background-color: transparent;
+  border-radius: 0.3rem;
+}
+
+option {
+  background-color: $card-color;
+}
+
 body {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 1rem;
   background: $backgroung-color;
-  color: whitesmoke;
+  color: $text-color;
   @include header;
   @include generalBalance;
   @include account;
+  @include addAccount;
   .card {
-    background-color: rgb(46, 46, 46);
+    background-color: $card-color;
     border-radius: 0.3rem;
     padding: 1rem 1rem 0 1rem;
     margin-top: 1rem;
     .card-header {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       .title {
         font-weight: bold;
         margin-bottom: 0.5rem;
       }
-			.card-options {
-				font-size: 1.3rem;
-				color: $primary-color;
-				.add {
-					cursor: pointer;
-				}
-			}
+      .card-options {
+        font-size: 1.3rem;
+        color: $primary-color;
+        .add {
+          cursor: pointer;
+        }
+      }
     }
   }
 }
