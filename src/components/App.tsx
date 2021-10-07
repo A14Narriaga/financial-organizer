@@ -1,17 +1,21 @@
 import "../scss/App.scss";
 import { useState } from "react";
 import { IoMdAddCircle } from "react-icons/io";
+import Login from "./login";
 import Header from "./Header";
 import GeneralBalance from "./GeneralBalance";
 import Account from "./Account";
 import AddAccount from "./modals/AddAccount";
 
 const App = () => {
+  const [login, setLogin] = useState(true);
   const [addAccount, setAddAccount] = useState(false);
   const [showAmount, setShowAmount] = useState(true);
   const hiddeAmout = "----";
 
-  return (
+  return login ? (
+    <Login setLogin={setLogin} />
+  ) : (
     <>
       <Header />
       <GeneralBalance
@@ -25,7 +29,10 @@ const App = () => {
         <div className="card-header">
           <p className="title">Mis cuentas</p>
           <div className="card-options">
-            <IoMdAddCircle className="add" onClick={() => setAddAccount((account: boolean) => account ? false : true)} />
+            <IoMdAddCircle
+              className="add"
+              onClick={() => setAddAccount(true)}
+            />
           </div>
         </div>
         <Account
@@ -55,7 +62,7 @@ const App = () => {
           </div>
         </div>
       </section>
-      {addAccount && <AddAccount setAddAccount={setAddAccount}/>}
+      {addAccount && <AddAccount setAddAccount={setAddAccount} />}
     </>
   );
 };

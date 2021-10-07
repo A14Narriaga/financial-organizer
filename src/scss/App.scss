@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400;500;600&display=swap");
+@import "login";
 @import "header";
 @import "generalBalance";
 @import "account";
@@ -60,6 +61,7 @@ body {
   padding: 0 1rem;
   background: $backgroung-color;
   color: $text-color;
+	@include login;
   @include header;
   @include generalBalance;
   @include account;

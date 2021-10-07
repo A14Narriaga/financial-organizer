@@ -31,7 +31,7 @@ const AddAccount = ({ setAddAccount }: { setAddAccount: any }) => {
         <p>Agregar cuenta</p>
         <IoMdCloseCircle
           onClick={() =>
-            setAddAccount((account: boolean) => (account ? false : true))
+            setAddAccount(false)
           }
         />
       </div>
