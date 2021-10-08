@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/financial-organizer/static/css/main.933ea1a3.chunk.css",
-    "main.js": "/financial-organizer/static/js/main.9324b27a.chunk.js",
-    "main.js.map": "/financial-organizer/static/js/main.9324b27a.chunk.js.map",
+    "main.js": "/financial-organizer/static/js/main.e6e3c571.chunk.js",
+    "main.js.map": "/financial-organizer/static/js/main.e6e3c571.chunk.js.map",
     "runtime-main.js": "/financial-organizer/static/js/runtime-main.69731105.js",
     "runtime-main.js.map": "/financial-organizer/static/js/runtime-main.69731105.js.map",
     "static/js/2.87988d4c.chunk.js": "/financial-organizer/static/js/2.87988d4c.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.69731105.js",
     "static/js/2.87988d4c.chunk.js",
     "static/css/main.933ea1a3.chunk.css",
-    "static/js/main.9324b27a.chunk.js"
+    "static/js/main.e6e3c571.chunk.js"
   ]
 }
