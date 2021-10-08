@@ -5,10 +5,15 @@ import Login from "./login";
 import Header from "./Header";
 import GeneralBalance from "./GeneralBalance";
 import Account from "./Account";
-import AddAccount from "./modals/AddAccount";
+import AddAccount from "./AddAccount";
+import AccountInt from "../interfaces/Account";
+
+const initialAccounts: Array<AccountInt> = JSON.parse("[]");
 
 const App = () => {
   const [login, setLogin] = useState(true);
+  const [balance, setBalance] = useState(0);
+  const [accounts, setAccounts] = useState(initialAccounts);
   const [addAccount, setAddAccount] = useState(false);
   const [showAmount, setShowAmount] = useState(true);
   const hiddeAmout = "----";
@@ -19,7 +24,7 @@ const App = () => {
     <>
       <Header />
       <GeneralBalance
-        balance={2500.5}
+        balance={balance}
         currency={"MXN"}
         showAmount={showAmount}
         setShowAmount={setShowAmount}
@@ -35,34 +40,34 @@ const App = () => {
             />
           </div>
         </div>
-        <Account
-          bank={"wallet"}
-          name={"Cartera"}
-          type={"Cuenta corriente"}
-          currency={"MXN"}
-          amount={100.01}
-          showAmount={showAmount}
-          hiddeAmout={hiddeAmout}
-        />
-        <Account
-          bank={"banamex"}
-          name={"Debito"}
-          type={"Cuenta corriente"}
-          currency={"MXN"}
-          amount={500.01}
-          showAmount={showAmount}
-          hiddeAmout={hiddeAmout}
-        />
+        {accounts.map((account: AccountInt) => (
+          <Account
+						key={account.name}
+            bank={account.bank}
+            name={account.name}
+            type={account.type}
+            currency={"MXN"}
+            amount={account.amount}
+            showAmount={showAmount}
+            hiddeAmout={hiddeAmout}
+          />
+        ))}
       </section>
+      {addAccount && (
+        <AddAccount
+          setBalance={setBalance}
+          setAddAccount={setAddAccount}
+          setAccounts={setAccounts}
+        />
+      )}
       <section className="card">
         <div className="card-header">
-          <p className="title">Tarjetas de credito</p>
+          <p className="title">Tarjetas de crédito</p>
           <div className="card-options">
             <IoMdAddCircle className="add" />
           </div>
         </div>
       </section>
-      {addAccount && <AddAccount setAddAccount={setAddAccount} />}
     </>
   );
 };

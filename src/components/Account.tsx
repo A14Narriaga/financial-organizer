@@ -1,3 +1,5 @@
+import formatAmout from "../utils";
+
 const Account = ({
   bank,
   name,
@@ -27,7 +29,7 @@ const Account = ({
         </div>
       </div>
       <div className="account-amount">
-        <p>{`${currency} ${showAmount ? amount : hiddeAmout}`}</p>
+        <p>{`${currency} ${showAmount ? formatAmout(amount) : hiddeAmout}`}</p>
       </div>
     </section>
   );

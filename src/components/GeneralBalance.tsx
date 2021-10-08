@@ -1,14 +1,15 @@
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import formatAmout from "../utils";
 
 const GeneralBalance = ({
-	balance,
-	currency,
+  balance,
+  currency,
   showAmount,
   setShowAmount,
   hiddeAmout,
 }: {
-	balance: number
-	currency: string
+  balance: number;
+  currency: string;
   showAmount: boolean;
   setShowAmount: any;
   hiddeAmout: string;
@@ -26,7 +27,7 @@ const GeneralBalance = ({
         ></div>
         <div className="amount-content">
           <p>Saldo general</p>
-          <p>{`${currency} ${showAmount ? balance : hiddeAmout}`}</p>
+          <p>{`${currency} ${showAmount ? formatAmout(balance) : hiddeAmout}`}</p>
         </div>
       </div>
       <div
