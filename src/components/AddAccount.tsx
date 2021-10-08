@@ -2,6 +2,7 @@ import { IoMdCloseCircle } from "react-icons/io";
 import { FaCheckCircle } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import AccountInt from "../interfaces/Account";
+import amountFormat from "../utils";
 
 const AddAccount = ({
   setBalance,
@@ -14,6 +15,8 @@ const AddAccount = ({
 }) => {
   const [valid, setValid] = useState(false);
   const [amount, setAmount] = useState(-1);
+  const [inputAmount, setInputAmount] = useState("0.00");
+	const [formatAmount, setFormatAmount] = useState("000,000,000.00");
   const [name, setName] = useState("");
   const [selectedBank, setSelectedBank] = useState("title");
   const [selectedType, setSelectedType] = useState("title");
@@ -26,6 +29,31 @@ const AddAccount = ({
         selectedType !== "title"
     );
   }, [valid, amount, name, selectedBank, selectedType]);
+
+  const handleInputAmount = (value: string) => {
+		let array;
+    if (value.length > inputAmount.length) {
+      const numIn = value.split("").pop();
+      const str = (
+        formatAmount.substring(1, formatAmount.length) + numIn
+      ).replaceAll(",", "");
+      array = Array.from(str);
+      array[8] = array[9];
+      array[9] = ".";
+    } else {
+      const str = (
+        "0" + formatAmount.substring(0, formatAmount.length - 1)
+      ).replaceAll(",", "");
+      array = Array.from(str);
+      array[10] = array[9];
+      array[9] = ".";
+    }
+    const newFormatAmount = array.join("");
+    const num = parseFloat(newFormatAmount);
+    setAmount(num);
+    setInputAmount(amountFormat(num));
+    setFormatAmount(newFormatAmount);
+  };
 
   const saveAccount = () => {
     if (valid) {
@@ -50,10 +78,10 @@ const AddAccount = ({
           <div>
             <p>{"MXN"}</p>
             <input
-							className="input-amount"
+              className="input-amount"
               type="text"
-              placeholder="00,000.00"
-              onChange={(e) => setAmount(Number(e.target.value))}
+              value={inputAmount}
+              onChange={(e) => handleInputAmount(e.target.value)}
             />
           </div>
         </div>

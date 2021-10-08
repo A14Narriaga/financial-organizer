@@ -1,4 +1,4 @@
-import formatAmout from "../utils";
+import amountFormat from "../utils";
 
 const Account = ({
   bank,
@@ -29,7 +29,7 @@ const Account = ({
         </div>
       </div>
       <div className="account-amount">
-        <p>{`${currency} ${showAmount ? formatAmout(amount) : hiddeAmout}`}</p>
+        <p>{`${currency} ${showAmount ? amountFormat(amount) : hiddeAmout}`}</p>
       </div>
     </section>
   );
